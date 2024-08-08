@@ -4,13 +4,8 @@
 • Assignment: =, +=, -=, *=, /=, ^=, %=
 • Arithmetic: +, ++, -, --, *, /, ^, %
 • Logical: &&, ||, !
-• Comparison: ==, ===, >, <, >=, <=, !=
-*/
-
-/* built in functions:
-• Math.random() //Used to generate a random number (example on line 257)
-• Math.floor() //Used to round up (example on line 257)
-• parseInt(), parseFloat() //Used to change a string to an Integer/Float (example on line 264)
+• Relational: ==, ===, >, <, >=, <=, !=
+• Ternary: booleanExpression ? trueExpression : falseExpression (Example line 127)
 */
 
 /*Code output:
@@ -23,36 +18,67 @@
 • \b  backspace
 • \f  form feed
 */
-/* Example with concatination */
-var myString = "\"FirstLine\"\n\f'SecondLine'\n";
-myString += "\b\\ThirdLine\\\n\tForthLine\n";
-console.log(myString);
 
 /* Deferent ways to declare a variable: */
 var global; //Can be used anywhere
 let local; //Can only be used within the scope of declaration and cannot be redeclared
 const final = null; //The value cannot be chainged (read-only)
 
-/* Legth */
+/* Example with Concatination */
+console.log("// Concatination //");
+var myString = "\"FirstLine\"\n\f'SecondLine'\n";
+myString += "\b\\ThirdLine\\\n\tForthLine\n";
+console.log(myString);
+console.log("a" + "b");
+console.log(1 + 2);
+console.log("a" + 1 + 2);
+console.log(1 + "b" + 2);
+console.log(1 + 2 + "c" + "\n");
+
+/* String Methods */
+console.log("// String Methods //");
+console.log("/* length */");
 var name = "Abdulrahman";
-var nameLength;
-
-nameLength = name.length;
 
 console.log(name);
-console.log("The name is", nameLength, "Characters long\n");
+console.log("The name is", name.length, "Characters long" + "\n");
 
-/* First Letter and Last Letter */
-name = "timmy";
-var firstLetter;
-var lastLetter;
-
-firstLetter = name[0];
-lastLetter = name[name.length - 1];
-
+console.log("/* charAt() */");
 console.log(name);
-console.log("The first letter is", firstLetter);
-console.log("The last letter is", lastLetter, "\n");
+console.log("The first letter is", name[0]); //Get the 1st letter
+console.log("The first character is ", name.charAt(0)); //Get the 1st character
+console.log("The second character is ", name.charAt(2) + "\n") //Get the 2nd character (counting starts from 0)
+
+console.log("/* indexOf() */");
+console.log(name);
+console.log(name.indexOf("a")); //Get the first "a" in the string (counting starts from 0)
+console.log(name.indexOf("a", 7)); //Get the first "a" after the first 7 characters of the string (including character #7) (counting starts from 0)
+console.log(name.indexOf("w") + "\n"); //If a character does not exist or an error arises the outcome will be "-1"
+
+console.log("/* substring() */");
+console.log(name);
+console.log(name.substring(3)); //Display the name starting from the 3rd character (counting starts from 0)
+console.log(name.substring(3, 7) + "\n"); //Display the name starting from the 3rd character until the 7th character (counting starts from 0)
+
+console.log("/* toLowerCase() & toUpperCase() */");
+console.log(name);
+console.log(name.toLowerCase()); //Convert the string to lowercase
+console.log(name.toUpperCase() + "\n"); //Convert the string to uppercase
+
+console.log("/* startsWith() & endsWith() */");
+console.log(name);
+console.log(name.startsWith("A"));
+console.log(name.startsWith("a"));
+console.log(name.endsWith("n"));
+console.log(name.endsWith("m"));
+
+console.log("/* contains() & replace() & trim() */");
+console.log(name);
+//console.log(name.contains("u"));
+//console.log(name.contains("x"));
+console.log(name.replace("a", "A")); //replace the first "a" with "A"
+console.log(name.replaceAll("a", "A")); //replace all "a" with "A"
+console.log("      a  b c  ".trim() + "\n"); //removes any surrounding space
 
 /* Array */
 console.log("// Array //");
