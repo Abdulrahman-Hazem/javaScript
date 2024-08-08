@@ -72,10 +72,10 @@ console.log(name.startsWith("a"));
 console.log(name.endsWith("n"));
 console.log(name.endsWith("m"));
 
-console.log("/* contains() & replace() & trim() */");
+console.log("/* includes() & replace() & trim() */");
 console.log(name);
-//console.log(name.contains("u"));
-//console.log(name.contains("x"));
+console.log(name.includes("u"));
+console.log(name.includes("x"));
 console.log(name.replace("a", "A")); //replace the first "a" with "A"
 console.log(name.replaceAll("a", "A")); //replace all "a" with "A"
 console.log("      a  b c  ".trim() + "\n"); //removes any surrounding space
