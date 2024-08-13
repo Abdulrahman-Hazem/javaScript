@@ -2,9 +2,10 @@
 
 /* Operators:
 • Assignment: =, +=, -=, *=, /=, ^=, %=
-• Arithmetic: +, ++, -, --, *, /, ^, %
+• Arithmetic: +, ++, -, --, *, /, %, (use Math.pow() for exponentiation)
 • Logical: &&, ||, !
 • Relational: ==, ===, >, <, >=, <=, !=
+• Bitwise: &, |, ^, ~, <<, >>, >>>
 • Ternary: booleanExpression ? trueExpression : falseExpression (Example line 176)
 */
 
